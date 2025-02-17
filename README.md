@@ -30,35 +30,30 @@ The aws-ecs-fargate-connect project provides a solution for connecting to Amazon
 
 ## Quick Start
 
-1. **Installation**:
+```bash
+# Installation
+# Install Terraform and AWS CLI on your local machine or development environment.
 
-   - Install Terraform and AWS CLI on your local machine or development environment.
+# Configuration
+# 1. Clone the aws-ecs-fargate-connect repository.
+# 2. Navigate to the `environment` directory and update the `variables.tf` file with your AWS account details, VPC ID, subnet ID, and ECS cluster name.
 
-2. **Configuration**:
+# Run Terraform
+terraform init
+terraform apply
+```
 
-   - Clone the aws-ecs-fargate-connect repository.
-   - Navigate to the `environment` directory and update the `variables.tf` file with your AWS account details, VPC ID, subnet ID, and ECS cluster name.
+This will provision an EC2 instance with the necessary IAM permissions and security group configurations to connect to your ECS Fargate tasks.
 
-3. **Run Terraform**:
+```bash
+# Connect to the EC2 Instance
+# Use the AWS Systems Manager Session Manager to connect to the provisioned EC2 instance.
 
-   ```bash
-   terraform init
-   terraform apply
-   ```
+# Execute the Connection Script
+./ecs_connect.sh <service_name>
+```
 
-   This will provision an EC2 instance with the necessary IAM permissions and security group configurations to connect to your ECS Fargate tasks.
-
-4. **Connect to the EC2 Instance**:
-
-   - Use the AWS Systems Manager Session Manager to connect to the provisioned EC2 instance.
-
-5. **Execute the Connection Script**:
-
-   ```bash
-   ./ecs_connect.sh <service_name>
-   ```
-
-   Replace `<service_name>` with the name of the service you want to connect to.
+Replace `<service_name>` with the name of the service you want to connect to.
 
 ## Architecture Overview
 
@@ -125,10 +120,6 @@ module "ec2" {
 # Example usage of the ecs_connect.sh script
 ./ecs_connect.sh <service_name>
 ```
-
-## API Reference
-
-This project does not expose any external APIs. It is designed to be used locally or within the provisioned EC2 instance.
 
 ## Configuration
 
