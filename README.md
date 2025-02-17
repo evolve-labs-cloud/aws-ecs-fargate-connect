@@ -55,10 +55,10 @@ The aws-ecs-fargate-connect project provides a solution for connecting to Amazon
 5. **Execute the Connection Script**:
 
    ```bash
-   ./ecs_connect.sh <container_name> <cluster_name>
+   ./ecs_connect.sh <service_name>
    ```
 
-   Replace `<container_name>` with the name of the container you want to connect to, and `<cluster_name>` with the name of your ECS cluster (if different from the default).
+   Replace `<service_name>` with the name of the service you want to connect to.
 
 ## Architecture Overview
 
@@ -123,7 +123,7 @@ module "ec2" {
 
 ```bash
 # Example usage of the ecs_connect.sh script
-./ecs_connect.sh <container_name> <cluster_name>
+./ecs_connect.sh <service_name>
 ```
 
 ## API Reference
