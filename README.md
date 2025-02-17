@@ -2,6 +2,10 @@
 
 The aws-ecs-fargate-connect project provides a solution for connecting to Amazon Elastic Container Service (ECS) Fargate tasks. It allows developers to establish an interactive session with a running container within an ECS Fargate task, enabling debugging, troubleshooting, and maintenance operations.
 
+## Architecture
+
+![Architecture Diagram](architecture.png)
+
 ## System Requirements
 
 - **Runtime Environment**: This project is designed to run on Amazon Web Services (AWS) infrastructure and requires the following services:
