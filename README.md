@@ -50,6 +50,7 @@ This will provision an EC2 instance with the necessary IAM permissions and secur
 # Use the AWS Systems Manager Session Manager to connect to the provisioned EC2 instance.
 
 # Execute the Connection Script
+cd /home
 ./ecs_connect.sh <service_name>
 ```
 
