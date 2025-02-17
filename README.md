@@ -128,8 +128,6 @@ module "ec2" {
 | ------------------ | ------------------------------------------------------------ | -------- | ------- | ------------------------------------------------------------------- |
 | `ec2_config`       | A map of EC2 instance configuration options                  | Yes      | N/A     | `{ ami = "ami-0123456789abcdef", instance_type = "t3.micro", ... }` |
 | `environment`      | The environment name (e.g., dev, staging, prod)              | Yes      | N/A     | `"dev"`                                                             |
-| `key`              | The SSH key pair name for the EC2 instance                   | Yes      | N/A     | `"my-key-pair"`                                                     |
-| `bucket`           | The S3 bucket name for Terraform state storage               | Yes      | N/A     | `"my-terraform-state-bucket"`                                       |
 | `region`           | The AWS region where resources will be provisioned           | Yes      | N/A     | `"us-east-1"`                                                       |
 | `account_id`       | The AWS account ID where resources will be provisioned       | Yes      | N/A     | `"123456789012"`                                                    |
 | `ecs_cluster_name` | The name of the ECS cluster containing the Fargate tasks     | Yes      | N/A     | `"my-ecs-cluster"`                                                  |

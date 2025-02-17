@@ -28,13 +28,6 @@ variable "ec2_config" {
 variable "environment" {
   type = string
 }
-
-variable "key" {
-  type = string
-}
-variable "bucket" {
-  type = string
-}
 variable "region" {
   type = string
 }
